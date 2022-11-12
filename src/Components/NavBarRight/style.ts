@@ -1,24 +1,24 @@
 import styled from 'styled-components';
 
-export const StyleNavBarRight = styled.div`
- position: fixed;
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  z-index: 998;
-  top: 0;
-  right: 5px;
-  padding-top: 4rem;
+  
   width: 20rem;
   height: 100vh;
   overflow: hidden;
   transition: all 1s;
+  position: fixed;
+  background: rgba(0,0,0,0.1);
+  right: 0;
   .wrraper{
-    height: 100%;
     display: flex;
+    height: 100%;
     flex-direction: column;
-    overflow: hidden;
-    padding: 2rem 20px 0 0;
+    overflow: auto;
     transition: all .5s;
+    padding-top: 2rem;
+    flex-shrink: 0;
     .separator{
       display: flex;
       content: "";
@@ -32,12 +32,12 @@ export const StyleNavBarRight = styled.div`
     }
     ::-webkit-scrollbar{
       position: absolute;
-      background-color: rgba(0, 0, 0,0.1);
+      background-color: transparent;
       top: 0;
       width: 14px;
     }
     ::-webkit-scrollbar-thumb{
-      background: rgba(0,0,0,0.3);
+      background: transparent;
       border-radius: 20px;
       width: 50%;
       height: 20px;
@@ -47,24 +47,35 @@ export const StyleNavBarRight = styled.div`
     .head-patrocinio{
       font-size: 1.5rem;
       font-weight: 600;
-      margin: 1rem 0;
+      width: 80%;
+      margin: 1rem auto;
       color: gray;
     }
+   
     .patrocinio{
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 100%;
-      margin: 6px 0;
+      width: 90%;
+      margin: 6px auto;
       padding: 5px;
       border-radius: 20px;
+      flex-shrink: 0;
+
       .patrocinio-text{
-        font-size: 1rem;
+        h2{
+          font-size: 20px;
+          margin-bottom: 8px;
+        }
+        p{
+          font-size: 14px;
+          width: 70%;
+        }
       }
       img{
-        height: 120px;
-        width: 120px;
-        margin-right: 15px;
+        height: 80px;
+        width: 80px;
+        margin-right: 10px;
         border-radius: 10px;
       }
       :hover{
@@ -74,25 +85,35 @@ export const StyleNavBarRight = styled.div`
     }
 
   }
+
+
+
   :hover .wrraper{
     overflow-y: visible;
     transition: all 1s;
+    ::-webkit-scrollbar{
+      background: rgba(0, 0, 0, 0.1);
+    }
+    ::-webkit-scrollbar-thumb{
+      background: rgba(0, 0, 0, 0.3);
+    }
   }
   .cabecalho{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 360px;
-    width: 270px;
-    margin: 0 10px;
-    padding: 10px 15px;
-    border-radius: 25px;
+    height: 260px;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
     background: white;
     position: relative;
+    flex-shrink: 0;
+
     .fa-times-circle{
       position: absolute;
-      right: 10px;
+      right: -10px;
       top: -15px;
       font-size: 2rem;
     }
@@ -102,8 +123,8 @@ export const StyleNavBarRight = styled.div`
       padding: 0 ;
       width: 100%;
       img{
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
         margin: 10px;
         border-radius: 50%;
       }
@@ -114,8 +135,7 @@ export const StyleNavBarRight = styled.div`
     }
 
     h1{
-      font-size: 1.4rem;
-      margin: 1rem 0;
+      font-size: 20px;
     }
   }
   .atalho{
@@ -125,6 +145,8 @@ export const StyleNavBarRight = styled.div`
     width: 100%;
     padding: 10px 20px;
     margin: 10px 0;
+    flex-shrink: 0;
+
     h1{
       font-size: 1.6rem;
       opacity: 0.5;
@@ -149,6 +171,8 @@ export const StyleNavBarRight = styled.div`
     height: 40px;
     width: 100%;
     border-radius: 25px;
+    flex-shrink: 0;
+
     i{
       font-size: 1.5rem;
       margin-right: 20px;
@@ -168,6 +192,8 @@ export const StyleNavBarRight = styled.div`
     width: 40px;
     margin-right: 10px;
     border-radius: 50%;
+    flex-shrink: 0;
+
   }
   footer{
     font-size: 1.5rem;

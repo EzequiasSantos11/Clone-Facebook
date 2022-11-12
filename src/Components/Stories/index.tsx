@@ -1,7 +1,7 @@
-import React from 'react';
 import { ContainerStories } from './style';
-import StoriesRandom from '../StoriesRandom';
-const Stories: React.FC =()=>{
+import { StoriesRandom } from '../StoriesRandom';
+
+export function Stories(){
  return(
   <ContainerStories>
    <div className="addStorie">
@@ -18,4 +18,3 @@ const Stories: React.FC =()=>{
   </ContainerStories>
  );
 }
-export default Stories;

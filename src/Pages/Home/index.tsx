@@ -1,25 +1,24 @@
 import React from 'react';
-import { StyleHome } from './styles';
-import NewPosters from '../../Components/Posters';
-import Stories from '../../Components/Stories';
-import PosterRandom from '../../Components/Posters/PosterRandom';
+import { Container } from "../../styles/HomeStyles";
+import { NewPosters } from '../../Components/NewPosters';
+import { Stories } from '../../Components/Stories';
+import { PosterRandom } from '../../Components/PosterRandom';
+import { Header } from '../../Components/Header';
+import { NavBarRight } from '../../Components/NavBarRight';
+import { NavBarLeft } from '../../Components/NavBarLeft';
 
-const Home: React.FC =()=>{
+export default function Home(){
  return(
-  <StyleHome>
-   <div className="wrraper">
-    <Stories/>
-    <NewPosters/>
-    <PosterRandom />
-    <PosterRandom/>
-    <PosterRandom/>
-    <PosterRandom/>
-    <PosterRandom/>
-    <PosterRandom/>
-    <PosterRandom/>
-    <PosterRandom/>
-   </div>
-  </StyleHome>
+  <Container>
+    <Header/>
+    <NavBarRight/>
+    <NavBarLeft/>
+    <div className="wrapper">
+      <Stories/>
+      <NewPosters/>
+      <PosterRandom />
+      <PosterRandom/>
+    </div>
+  </Container>
  );
 }
-export default Home; 

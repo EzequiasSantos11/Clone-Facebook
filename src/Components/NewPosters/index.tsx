@@ -1,7 +1,7 @@
 import React from 'react';
 import { ContainerPost } from './style';
 
-const NewPosters: React.FC = () => {
+export function NewPosters(){
  return (
   <ContainerPost>
    <div className="New-post">
@@ -29,4 +29,3 @@ const NewPosters: React.FC = () => {
   </ContainerPost>
  );
 }
-export default NewPosters;
