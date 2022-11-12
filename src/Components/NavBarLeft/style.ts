@@ -130,4 +130,8 @@ export const Container = styled.div`
     }
   }
 
+  @media (max-width: 800px) {
+    width: 20px;
+    display: none;
+  }
 `;

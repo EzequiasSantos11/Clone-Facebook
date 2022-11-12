@@ -205,4 +205,8 @@ export const Container = styled.div`
     padding: 10px 20px;
     margin: 10px 0;
   }
+  @media (max-width: 800px) {
+    width: 20px;
+    display: none;
+  }
 `;
